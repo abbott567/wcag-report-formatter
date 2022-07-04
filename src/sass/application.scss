@@ -1,0 +1,83 @@
+@import 'default-report';
+@import 'govuk/all';
+@import 'highlight.js/scss/a11y-light';
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+}
+main {
+  margin: auto;
+  max-width: 900px;
+}
+div {
+  border-bottom: 1px solid grey;
+}
+dl {
+  dt {
+    font-weight: 700;
+  }
+  dd {
+    max-width: 66%;
+    margin-bottom: 1rem;
+  }
+}
+ul.summary {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  background-color: black;
+  color: white;
+  border-radius: 0.5em;
+}
+li.summary {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  margin: 1em;
+  text-align: center;
+}
+span.number {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.125em;
+  line-height: 1;
+  color: white;
+}
+span.label {
+  font-size: 1.125rem;
+  color: white;
+}
+table {
+  tr {
+    vertical-align: top;
+
+    th {
+      border: 1px solid grey;
+      &.left {
+        width: 25%;
+        background-color: black;
+        color: white;
+      }
+      &.right {
+        width: 50%;
+        background-color: black;
+        color: white;
+      }
+    }
+
+    td {
+      padding: 1em !important;
+  
+      h6 {
+        font-size: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+code {
+  font-size: 1rem;
+}
