@@ -32,7 +32,7 @@ app.post('/upload', (req, res) => {
     if (err) return res.redirect('/error')
     const rawHTML = await loadHTML(uploadPath)
     const modifiedHTML = await modifyHTML(rawHTML)
-    await saveHTML(modifiedHTML, filename)
+    await saveHTML(modifiedHTML, `formatted-${filename}`)
     res.download(`public/formatted-${filename}.html`)
   })
 })
