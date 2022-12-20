@@ -11,6 +11,7 @@ async function modifyTags ($) {
 
       const result = $p.text().replace(`${spanText}`, '')
       if (result.match(/Not present/)) $p.addClass('govuk-tag--grey')
+      if (result.match(/Cannot tell/)) $p.addClass('govuk-tag--grey')
       else if (result.match(/Not checked/)) $p.addClass('govuk-tag--grey')
       else if (result.match(/Passed/)) $p.addClass('govuk-tag--green')
       else if (result.match(/Failed/)) $p.addClass('govuk-tag--red')
